@@ -1,0 +1,17 @@
+[
+  {
+    "model": "api_app.CartItem",
+    "pk": 1,
+    "fields": {
+      "product_name": "John"
+    }
+  },
+  {
+    "model": "api_app.CartItem",
+    "pk": 2,
+    "fields": {
+      "product_name": "Paul"
+
+    }
+  }
+]
