@@ -15,9 +15,11 @@ from .models import Monicao
 
 class MonicaoViews(APIView):
     def post(self, request):
-        serializer = ArmaSerializer(data=request.data)
+        serializer = MonicaoSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
+            details = objeto_tipo.objects.create(tipo = 'monicao')
+            details.save()
             return Response({"status": "success", "data": serializer.data}, status=status.HTTP_200_OK)
         else:
             return Response({"status": "error", "data": serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
@@ -27,12 +29,15 @@ class ArmaViews(APIView):
         serializer = ArmaSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
+            details = objeto_tipo.objects.create(tipo = 'arma')
+            details.save()
             return Response({"status": "success", "data": serializer.data}, status=status.HTTP_200_OK)
         else:
             return Response({"status": "error", "data": serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
 
-details =objeto_tipo.objects.create(tipo = '44')
+details =objeto_tipo.objects.create(tipo = 'control')
 details.save()
+
 
 """
 {"product_name":"name",

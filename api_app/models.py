@@ -42,4 +42,13 @@ class Model(model.Model):
     def save(self, *args, **kwargs):
         q =  MyModel.objects.select_related('fields1', 'field2',  'filed2').filter(related_field)
     super(Model, self).save(*args, **kwargs)
+
+{"marca":"name",
+  "modelo":"41",
+  "valor_estimado":"1"}
+
+  {"marca:"name",
+  "modelo":"41",
+  "quantidade_de_tiros":3,
+   "valor_estimado":70}
 """
