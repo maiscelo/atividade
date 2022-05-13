@@ -35,9 +35,9 @@ class ArmaViews(APIView):
         else:
             return Response({"status": "error", "data": serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
 
-details =objeto_tipo.objects.create(tipo = 'control')
-details.save()
-
+#details =objeto_tipo.objects.create(tipo = 'control')
+#details.save()
+#teste github
 
 """
 {"product_name":"name",
